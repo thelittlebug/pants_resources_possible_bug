@@ -1,0 +1,18 @@
+[GLOBAL]
+pants_version = "2.23.0"
+
+backend_packages = [
+    "pants.backend.experimental.adhoc",
+    "pants.backend.python",
+]
+
+[source]
+root_patterns = [
+    "/src/python",
+
+    # fake root because of https://github.com/pantsbuild/pants/issues/21444
+    "/",
+]
+
+[python]
+interpreter_constraints = ["CPython>=3.12.5"]
